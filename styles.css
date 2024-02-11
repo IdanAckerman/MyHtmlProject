@@ -1,0 +1,144 @@
+body{
+	background : #257878;
+}
+
+.bgdiv{
+	height: 110%;
+	margin: 15px;
+	background: #FFFFFF;
+	background-clip: padding-box;
+	border: 10px;
+	border-radius: 25px;
+}
+
+.qaTitle{
+	text-transform: uppercase;
+	text-align: center;
+	color: GrayText;
+	text-decoration: underline;
+	font-size: 26px;
+	font-weight: 525;
+}
+
+nav {
+  margin: 10px;
+  .menuList {
+    list-style: none;
+    display: flex;
+
+    li {
+      margin: 30px auto;
+
+      a {
+        text-decoration: none;
+        color: GrayText;
+        font-size: 24px;
+        font-weight: 400;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        text-transform: uppercase;
+
+        &::before {
+          content: attr(data-item);
+          transition: 0.5s;
+          color: black;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 0;
+          overflow: hidden;
+        }
+
+        &:hover {
+          &::before {
+            width: 100%;
+            transition: all 0.5s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+.secondDiv{
+	display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    /*grid-gap: 10px;*/
+}
+
+.floatDiv {
+    width: 50%;
+    padding: 20px;
+	margin: 0px auto;
+	text-align: center;
+}  
+
+#qaImg{
+	border-radius: 25px;
+	width: 400px;
+	position: relative;
+}
+
+#myImg{
+	border-radius: 25px;
+	width: 350px;
+	margin-top: 30px;
+	position: relative;
+}
+
+.pText{
+	font-family: Verdana;
+	font-size: 16px;
+	text-align: left;
+	color: GrayText;
+}
+
+.pContact{
+	font-family: Verdana;
+	font-size: 16px;
+	text-align: center;
+	color: GrayText;
+}
+
+#myTitle{
+	text-transform: uppercase;
+	text-align: center;
+	color: GrayText;
+	font-size: 22px;
+	font-weight: 525;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #257878;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #257878;
+  color: white;
+}
+
+.fa-instagram {
+  background: #257878;
+  color: white;
+}
+
+#linksDiv{
+	text-align: center;
+}
