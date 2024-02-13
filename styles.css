@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body{
 	background : #257878;
 }
@@ -62,33 +66,36 @@ nav {
   }
 }
 
-.secondDiv{
-	display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    /*grid-gap: 10px;*/
-}
-
 .floatDiv {
     width: 50%;
+	float: left;
     padding: 20px;
 	margin: 0px auto;
 	text-align: center;
 }  
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="floatDiv"] {
+    width: 100%;
+  }
+}
+
 #qaImg{
 	border-radius: 25px;
-	width: 400px;
+	width: 80%;
 	position: relative;
 }
 
 #myImg{
 	border-radius: 25px;
-	width: 350px;
+	width: 60%;
 	margin-top: 30px;
 	position: relative;
 }
 
 .pText{
+	padding-left: 5%;
 	font-family: Verdana;
 	font-size: 16px;
 	text-align: left;
@@ -113,7 +120,7 @@ nav {
 .fa {
   padding: 20px;
   font-size: 30px;
-  width: 15px;
+  width: 50px;
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
