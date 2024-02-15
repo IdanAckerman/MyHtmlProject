@@ -8,7 +8,7 @@ body{
 
 .bgdiv{
 	height: 110%;
-	margin: 15px;
+	margin: 1%;
 	background: #FFFFFF;
 	background-clip: padding-box;
 	border: 10px;
@@ -25,13 +25,15 @@ body{
 }
 
 nav {
-  margin: 10px;
+  margin: 2.5%;
+  position: sticky;
+  top: 0;
   .menuList {
     list-style: none;
     display: flex;
 
     li {
-      margin: 30px auto;
+      margin: 2.5% auto;
 
       a {
         text-decoration: none;
