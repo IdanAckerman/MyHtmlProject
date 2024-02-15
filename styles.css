@@ -15,6 +15,8 @@ body{
 	border-radius: 25px;
 }
 
+
+
 .qaTitle{
 	text-transform: uppercase;
 	text-align: center;
@@ -24,7 +26,7 @@ body{
 	font-weight: 525;
 }
 
-nav {
+/*nav {
   margin: 2.5%;
   .menuList {
     list-style: none;
@@ -64,7 +66,52 @@ nav {
       }
     }
   }
+}*/
+
+nav {
+    margin: 2.5%;
 }
+
+.menuList {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+}
+
+.menuList li {
+    margin: 2.5% auto; /* Adjust margin for better spacing */
+    flex: 1; /* Make items flexible to distribute space evenly */
+    text-align: center; /* Center text within list items */
+}
+
+.menuList a {
+    text-decoration: none;
+    color: GrayText;
+    font-size: 24px;
+    font-weight: 400;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.menuList a::before {
+    content: attr(data-item);
+    transition: 0.5s;
+    color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.menuList a:hover::before {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
 
 .floatDiv {
     width: 50%;
