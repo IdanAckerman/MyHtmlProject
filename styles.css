@@ -26,8 +26,6 @@ body{
 
 nav {
   margin: 2.5%;
-  position: sticky;
-  top: 0;
   .menuList {
     list-style: none;
     display: flex;
