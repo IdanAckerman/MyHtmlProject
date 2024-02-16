@@ -1,92 +1,141 @@
-* {
-  box-sizing: border-box;
+*{
+	box-sizing: border-box;
 }
 
-body{
-	background : #257878;
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.bgdiv{
-	height: 110%;
-	margin: 1%;
-	background: #FFFFFF;
-	background-clip: padding-box;
-	border: 10px;
-	border-radius: 25px;
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
 }
 
-
-
-.qaTitle{
-	text-transform: uppercase;
-	text-align: center;
-	color: GrayText;
-	text-decoration: underline;
-	font-size: 26px;
-	font-weight: 525;
+.header {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/header.jpeg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/header.jpeg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
 }
 
-/*nav {
-  margin: 2.5%;
-  .menuList {
-    list-style: none;
-    display: flex;
+.header .container {
+  position: relative;
+  height: 100%;
+}
 
-    li {
-      margin: 2.5% auto;
+.header .header-content {
+  width: 100%;
+  position: absolute;
+  padding-left: 10%;
+  top: 55%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #fff;
+}
 
-      a {
-        text-decoration: none;
-        color: GrayText;
-        font-size: 24px;
-        font-weight: 400;
-        transition: all 0.5s ease-in-out;
-        position: relative;
-        text-transform: uppercase;
+.header .header-content .header-subtitle {
+  font-weight: 200;
+  font-size: calc(20px + (45 - 20) * ((100vw - 300px) / (1600 - 300)));
+}
 
-        &::before {
-          content: attr(data-item);
-          transition: 0.5s;
-          color: black;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          width: 0;
-          overflow: hidden;
-        }
+.header .header-content .header-title {
+  font-size: calc(40px + (120 - 40) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: bold;
+  line-height: .7;
+  margin-bottom: 25px;
+  color: inherit;
+}
 
-        &:hover {
-          &::before {
-            width: 100%;
-            transition: all 0.5s ease-in-out;
-          }
-        }
-      }
-    }
+.header .header-content .header-mono {
+  letter-spacing: 5px;
+  font-weight: 500;
+  font-size: calc(12px + (19 - 12) * ((100vw - 300px) / (1600 - 300)));
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767.98px) {
+  .header {
+    height: 500px;
+    min-height: 500px;
   }
-}*/
+  .header .social {
+    margin: auto;
+  }
+  .header .header-content {
+    padding: 20px;
+  }
+  .header .header-content .header-mono {
+    letter-spacing: 2px;
+  }
+}
+
+.header-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  opacity: .8;
+  color: #212529;
+}
+
+.fa {
+    padding: 2vw;
+    font-size: 4vw;
+    width: 2vw;
+    text-align: center;
+    text-decoration: none;
+    margin: 1vw 1vw;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook,
+.fa-linkedin,
+.fa-instagram,
+.fa-github {
+    color: white;
+}
 
 nav {
-    margin: 2.5%;
+    margin: 1.5% auto;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow to the bottom border */
 }
 
 .menuList {
     list-style: none;
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+	position: center;
 }
 
 .menuList li {
-    margin: 2.5% auto; /* Adjust margin for better spacing */
+    margin: 1.5% auto; /* Adjust margin for better spacing */
     flex: 1; /* Make items flexible to distribute space evenly */
     text-align: center; /* Center text within list items */
 }
 
 .menuList a {
     text-decoration: none;
-    color: GrayText;
+    color: #212529;
     font-size: 24px;
     font-weight: 400;
     transition: all 0.5s ease-in-out;
@@ -94,7 +143,7 @@ nav {
     text-transform: uppercase;
 }
 
-.menuList a::before {
+/*.menuList a::before {
     content: attr(data-item);
     transition: 0.5s;
     color: black;
@@ -105,94 +154,119 @@ nav {
     right: 0;
     width: 0;
     overflow: hidden;
-}
+}*/
 
-.menuList a:hover::before {
+/*.menuList a:hover::before {
     width: 100%;
     transition: all 0.5s ease-in-out;
-}
-
-
-.floatDiv {
-    width: 50%;
-	float: left;
-    padding: 20px;
-	margin: 0px auto;
-	text-align: center;
-}  
+}*/
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  [class*="floatDiv"] {
+  [class*="menuList"] {
     width: 100%;
   }
 }
 
-#qaImg{
-	border-radius: 25px;
-	width: 80%;
-	position: relative;
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-#myImg{
-	border-radius: 25px;
-	width: 60%;
-	margin-top: 30px;
-	position: relative;
+.about-section {
+  display: flex; /* Use flexbox to make children side by side */
+  border-bottom: 1px solid #dee2e6;
 }
 
-.pText{
-	padding-left: 5%;
-	font-family: Verdana;
-	font-size: 16px;
-	text-align: left;
-	color: GrayText;
+.about-section .about-card {
+  flex: 1; /* Distribute equal space among children */
+  padding: 60px;
+  border-right: 1px solid #dee2e6;
 }
 
-.pContact{
-	font-family: Verdana;
-	font-size: 16px;
-	text-align: center;
-	color: GrayText;
+.about-section .about-card:last-child {
+  border-right: none; /* Remove border from the last child */
 }
 
-#myTitle{
-	text-transform: uppercase;
-	text-align: center;
-	color: GrayText;
-	font-size: 22px;
-	font-weight: 525;
+.social-icons {
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
 }
 
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 55px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
+.social-icons a {
+  display: inline-block; /* Display icons as inline-block elements */
+  margin-right: 10px; /* Add margin between icons */
+  text-decoration: none; /* Remove default text decoration */
+  color: inherit; /* Inherit color from parent */
 }
 
-.fa:hover {
-  opacity: 0.7;
+.social-icons a:last-child {
+  margin-right: 0; /* Remove margin from the last icon */
 }
 
-.fa-facebook {
-  background: #257878;
-  color: white;
+.social-icons a:hover {
+  opacity: 0.7; /* Reduce opacity on hover */
 }
 
-.fa-linkedin {
-  background: #257878;
-  color: white;
+@media only screen and (max-width: 768px) {
+  .about-section {
+    flex-direction: column; /* Stack children vertically */
+  }
+
+  .about-section .about-card {
+    flex: auto; /* Allow children to grow to fill available space */
+    padding: 30px; /* Reduce padding for smaller screens */
+    border-right: none; /* Remove border from all children */
+    border-bottom: 1px solid #dee2e6; /* Add bottom border for separation */
+  }
+
+  .social-icons a {
+    margin-right: 0; /* Remove margin between icons */
+    margin-bottom: 10px; /* Add margin below each icon */
+  }
 }
 
-.fa-instagram {
-  background: #257878;
-  color: white;
+#btn-download-cv {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#linksDiv{
-	text-align: center;
+#btn-download-cv i {
+    margin-right: 5px;
 }
+
+#btn-download-cv:hover {
+    background-color: #0056b3;
+}
+
+.info {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.info li i {
+    margin-right: 10px;
+}
+
+.info li span {
+    font-weight: bold;
+}
+
+
+
