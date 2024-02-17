@@ -143,28 +143,24 @@ nav {
     text-transform: uppercase;
 }
 
-/*.menuList a::before {
-    content: attr(data-item);
-    transition: 0.5s;
-    color: black;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 0;
-    overflow: hidden;
-}*/
+.sticky-nav {
+    position: relative; /* Ensure relative positioning for absolute positioning of sticky-nav */
+	transition: top 0.3s ease;
+}
 
-/*.menuList a:hover::before {
-    width: 100%;
-    transition: all 0.5s ease-in-out;
-}*/
+.sticky-nav.sticky {
+    position: fixed; /* Stick to the top when scrolled */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Take up full width */
+    z-index: 1000; /* Ensure it's above other content */
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   [class*="menuList"] {
     width: 100%;
+	margin-left: -5%;
   }
 }
 
@@ -237,7 +233,7 @@ nav {
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -248,6 +244,10 @@ nav {
 
 #btn-download-cv:hover {
     background-color: #0056b3;
+}
+
+.btn-d{
+	text-align:center;
 }
 
 .info {
