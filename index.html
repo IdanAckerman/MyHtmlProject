@@ -24,11 +24,11 @@
 				</div>
 			</div>
 		</header>
-		<nav>
+		<nav class="sticky-nav">
 			<ul class="menuList">
 				<li><a href="#home" data-item='Home'>Home</a></li>
 				<li><a href="#about" data-item='About'>About</a></li>
-				<li><a href="#btn-download-cv" data-item='Resume'>Resume</a></li>
+				<li><a href="#btn-download-cv" data-item='Resume' id="resume-link">Resume</a></li>
 			</ul>
 		</nav>
 		<div class="container-fluid">
@@ -85,7 +85,9 @@
 								<hr>
 							</div>
 					</div>
-					<button id="btn-download-cv" onclick="downloadCV()" ><i class="icon-down-circled2"></i>Download My CV</button>
+					<div class="btn-d">
+						<button id="btn-download-cv" onclick="downloadCV()" ><i class="icon-down-circled2"></i>Download My CV</button>
+					</div>
 				</div>
 			</div>
 		</div>
