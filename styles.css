@@ -156,12 +156,69 @@ nav {
     z-index: 1000; /* Ensure it's above other content */
 }
 
+/* Burger Menu Styles */
+.burger-menu {
+    display: none; /* Hide burger menu by default */
+    cursor: pointer;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #212529;
+    margin: 5px 0;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   [class*="menuList"] {
     width: 100%;
 	margin-left: -5%;
   }
+  
+      /* Show burger menu icon and hide regular navigation */
+    .menuList {
+        display: none;
+    }
+
+	/* Show menu options when burger menu is active */
+	.menuList.active {
+		background-color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+    .burger-menu {
+        display: block;
+    }
+	
+	
+    /* Adjustments for burger menu icon */
+    .sticky-nav {
+        padding: 10px; /* Add padding to give space around burger menu icon */
+    }
+
+    /* Ensure burger menu icon is positioned properly */
+    .burger-menu {
+        position: relative;
+        z-index: 1000;
+    }
+
+    /* Style for active state of burger menu */
+    .burger-menu.active .line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger-menu.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active .line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
 }
 
 .container-fluid {
