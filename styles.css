@@ -176,6 +176,11 @@ nav {
 	margin-left: -5%;
   }
   
+      nav {
+	border-bottom: none;  
+        box-shadow: none;
+    }
+  
       /* Show burger menu icon and hide regular navigation */
     .menuList {
         display: none;
