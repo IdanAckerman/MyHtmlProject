@@ -1,0 +1,334 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+}
+
+.header {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/strProject/wine_bg.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/strProject/wine_bg.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.header .container {
+  position: relative;
+  height: 100%;
+}
+
+.header .header-content {
+  width: 100%;
+  position: absolute;
+  padding-left: 10%;
+  top: 55%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #fff;
+}
+
+.header .header-content .header-subtitle {
+  font-weight: 200;
+  font-size: calc(20px + (45 - 20) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.header .header-content .header-title {
+  font-size: calc(40px + (120 - 40) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: bold;
+  line-height: .7;
+  margin-bottom: 25px;
+  color: inherit;
+}
+
+.header .header-content .header-mono {
+  letter-spacing: 5px;
+  font-weight: 500;
+  font-size: calc(12px + (19 - 12) * ((100vw - 300px) / (1600 - 300)));
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767.98px) {
+  .header {
+    height: 500px;
+    min-height: 500px;
+  }
+  .header .social {
+    margin: auto;
+  }
+  .header .header-content {
+    padding: 20px;
+  }
+  .header .header-content .header-mono {
+    letter-spacing: 2px;
+  }
+}
+
+.header-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  opacity: .8;
+  color: #212529;
+}
+
+.fa {
+    padding: 2vw;
+    font-size: 4vw;
+    width: 2vw;
+    text-align: center;
+    text-decoration: none;
+    margin: 1vw 1vw;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook,
+.fa-linkedin,
+.fa-instagram,
+.fa-github {
+    color: white;
+}
+
+nav {
+    margin: 1.5% auto;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow to the bottom border */
+}
+
+.menuList {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+	position: center;
+}
+
+.menuList li {
+    margin: 1.5% auto; /* Adjust margin for better spacing */
+    flex: 1; /* Make items flexible to distribute space evenly */
+    text-align: center; /* Center text within list items */
+}
+
+.menuList a {
+    text-decoration: none;
+    color: #212529;
+    font-size: 24px;
+    font-weight: 400;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.sticky-nav {
+    position: relative; /* Ensure relative positioning for absolute positioning of sticky-nav */
+	transition: top 0.3s ease;
+}
+
+.sticky-nav.sticky {
+    position: fixed; /* Stick to the top when scrolled */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Take up full width */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+    display: none; /* Hide burger menu by default */
+    cursor: pointer;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #212529;
+    margin: 5px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="menuList"] {
+    width: 100%;
+	margin-left: -5%;
+  }
+  
+      nav {
+		border-bottom: none;  
+        box-shadow: none;
+    }
+  
+      /* Show burger menu icon and hide regular navigation */
+    .menuList {
+        display: none;
+    }
+
+	/* Show menu options when burger menu is active */
+	.menuList.active {
+		background-color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+    .burger-menu {
+        display: block;
+    }
+	
+	
+    /* Adjustments for burger menu icon */
+    .sticky-nav {
+        padding: 10px; /* Add padding to give space around burger menu icon */
+    }
+
+    /* Ensure burger menu icon is positioned properly */
+    .burger-menu {
+        position: relative;
+        z-index: 1000;
+    }
+
+    /* Style for active state of burger menu */
+    .burger-menu.active .line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger-menu.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active .line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
+
+
+
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.about-section {
+  display: flex; /* Use flexbox to make children side by side */
+  border-bottom: 1px solid #dee2e6;
+  flex: 1; /* Distribute equal space among children */
+  padding: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+   .about-section {
+    padding: 30px; /* Reduce padding for smaller screens */
+    border-bottom: 1px solid #dee2e6; /* Add bottom border for separation */
+  }
+}
+
+
+
+
+
+
+.heading {
+    text-align: center;
+    font-size: 2.0em;
+    letter-spacing: 1px;
+    padding: 40px;
+    color: #212529;
+}
+
+/*.gallery-image {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-image img {
+  height: 250px;
+  width: 450px;
+  transform: scale(1.0);
+  transition: transform 0.4s ease;
+}
+
+.img-box {
+  box-sizing: content-box;
+  margin: 10px;
+  height: 250px;
+  width: 350px;
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: white;
+}
+
+.caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.transparent-box {
+  height: 250px;
+  width: 350px;
+  background-color:rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+
+.img-box:hover img { 
+  transform: scale(1.1);
+}
+
+.img-box:hover .transparent-box {
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
+}
+
+.img-box:hover {
+  cursor: pointer;
+}
+
+.caption > p:nth-child(2) {
+  font-size: 0.8em;
+}
+
+.opacity-low {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}*/
