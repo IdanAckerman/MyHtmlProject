@@ -1,6 +1,6 @@
 function downloadCV() {
     var link = document.createElement('a');
-    link.href = 'IdanAckermanCV_Updated.pdf';
+    link.href = 'Idan_Ackerman_CV_09_04_2024.pdf';
     link.target = '_blank'; // Open in a new tab
     document.body.appendChild(link);
     link.click();
