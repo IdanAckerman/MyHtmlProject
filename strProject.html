@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="strProject.css" /> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:600,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:600,900" rel="stylesheet"> 
   <script src="galleryjs.js"></script>
 </head>
 <body>
@@ -31,9 +31,9 @@
 			<div class="line"></div>
 		</div>
 		<ul class="menuList">
-			<li><a href="index.html" data-item='Home'>Home</a></li>
+			<li><a href="newIndex.html" data-item='Home'>Home</a></li>
 			<li><a href="#about" data-item='About'>About</a></li>
-			<li><a href="#str" data-item='Gallery'>STR</a></li>
+			<li><a href="#btn-download-str" data-item='STR'>STR</a></li>
 		</ul>
 	</nav>
 	<div class="container-fluid">
@@ -46,8 +46,11 @@
 				</p>
 			</div>
 		</div>
-	</div>	
-	<div>
+	</div>
+	<div class="btn-d">
+		<button id="btn-download-str" onclick="downloadSTR()" ><i class="icon-down-circled2"></i>Download Wine Route STR</button>
+	</div>
+	<div id="str-container">
 		<iframe id="str" style="height: 100vh; width: 100%" src="files/STR_Wine Route.pdf" type="">
 	</div>
 </body>
