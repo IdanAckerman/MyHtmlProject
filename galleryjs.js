@@ -95,4 +95,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
+function downloadSTR() {
+    var link = document.createElement('a');
+    link.href = 'files/STR_Wine Route.pdf';
+    link.target = '_blank'; // Open in a new tab
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
