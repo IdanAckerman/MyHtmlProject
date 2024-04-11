@@ -245,11 +245,6 @@ nav {
   }
 }
 
-
-
-
-
-
 .heading {
     text-align: center;
     font-size: 2.0em;
@@ -257,3 +252,37 @@ nav {
     padding: 40px;
     color: #212529;
 }
+
+#btn-download-str {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+	margin: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn-download-str i {
+    margin-right: 5px;
+}
+
+#btn-download-str:hover {
+    background-color: #0056b3;
+}
+
+.btn-d{
+	text-align:center;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Hide the div containing the iframe on screens smaller than 768px */
+  #str-container {
+    display: none;
+  }
+}
+
